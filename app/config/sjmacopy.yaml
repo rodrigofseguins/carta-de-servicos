@@ -1,0 +1,72 @@
+categorias:
+  # Categoria Serviços Processuais e Processo Judicial Eletrônico
+  - nome: <i class="fa fa-balance-scale" aria-hidden="true"></i> Serviços Processuais e Processo Judicial Eletrônico
+    servicos:
+      # Serviço Consulta processual
+      - nome: Consultar Processos 
+        descricao: Saiba como consultar informações sobre processos, inclusive PJe.<br>
+        usuarios: Público em geral
+        custo: Gratuito
+        requisitos: Possuir dados suficientes para consulta, como nº do processo, nome da parte, nome do advogado, CPF ou CNPJ.
+        etapas: |
+          De forma online:<br>
+          1. Acesse à <a href="https://www.trf1.jus.br/sjma/processual/consulta-processual" target="_blank">página de consulta</a><br>
+          2. Selecione o tipo de consulta<br>
+          3. Insira os dados para realizar a consulta.
+          De forma presencial: Dirija-se a uma secretaria de vara.
+        formas: Online
+        prazo: Imediato/72 horas
+        contato: Pode ser pelo email-ma@trf1.jus.br
+        comunicacao: O usuário poderá receber informações por e-mail, whatsapp ou telefone
+        prioridade: Legais
+      - nome: Acessar PJe sem certificado digital
+        descricao: Acesse seu processo sem necessidade de ter certificado digital.
+        usuarios: Público em geral
+        custo: Gratuito
+        requisitos: 'Documento de identificação(Ex.: CPF, RG, OAB...)'
+        etapas: |
+          <ol><li> Solicite seu cadastro pelo e-mail: atendimento.protocolo.ma@trf1.jus.br<br></li>
+          <li> Anexe cópias legíveis do CPF, RG ou OAB no caso de advogados e comprovante de residência.</li></ol>
+        formas: Online
+        prazo: Imediato/72 horas
+        contato: atendimento.protocolo.ma@trf1.jus.br
+        comunicacao: O usuário poderá receber informações por e-mail, whatsapp ou telefone
+      - nome: Acessar Atas e Pautas
+        descricao: Saiba como encontrar
+      - nome: Emitir GRU
+        descricao: Saiba como emitir a Guia de Recolhimento da União
+      - nome: Emitir Certidões
+        descricao: Saiba como emitir Certidões Cível, Criminal ou para fins eleitorais
+      - nome: Plantão Judicial
+        descricao: Como receber atendimento fora do expediente normal.
+     
+  # Categoria Servicos de Apoio e Segurança
+  - nome: <i class="fa fa-shield" aria-hidden="true"></i> Servicos de Apoio e Segurança
+    servicos:
+      - nome: Acesso ao Prédio Sede em São Luís
+        descricao: Saiba como acessar a Sede ou estacionamento
+      - nome: Atendimento na Recepção do Edifício Sede
+        descricao: Saiba onde fica a recepção e o que é necessário.
+      - nome: Advertências aos Visitantes
+        descricao: Fique informado do que é ou não permitido nas dependências do orgão
+        formas: Presencial
+  # Categoria Informações Gerais
+  - nome: <i class="fa fa-info" aria-hidden="true"></i> Informações Gerais
+    servicos:
+      - nome: Consultar os Principais Cargos, Endereços e Telefones
+        descricao: >
+          Consulte informações sobre Principais Cargos, Endereços, Telefones e Estrutura 
+          Organizacional da SJMA e Subseções na seção 
+          <a href="https://www.trf1.jus.br/sjma/institucional/enderecos-e-telefones">Institucional-Endereços e Telefones</a>
+      - nome: Diretrizes para adequada prestação de serviços
+        descricao: >
+          A Lei 13.460/2017, em seu art. 5º, estabelece um conjunto de diretrizes que devem
+          ser observadas pelos prestadores de serviços e agentes públicos com a finalidade 
+          de assegurar ao cidadão o direito à adequada prestação do serviço.
+  #Categoria Sobre a Carta de Serviços
+  - nome: <i class="fa fa-book" aria-hidden="true"></i> Sobre a Carta de Serviços
+    servicos:
+      - nome: Contribua com esta Carta de Serviços
+        descricao: <br><br><br>
+      - nome: Pesquisa de Satisfação da Carta de Serviços
+        descricao: <br><br><br>      

@@ -1,0 +1,104 @@
+{% import 'carta-estilos.html' as estilos %}
+{{ estilos.render_styles() }}
+
+<!-- div class="container" -->
+    <h3 class="area-title"><i class="fa fa-info-circle"></i> Carta de Serviços ao Usuário</h3>
+    <div class="form-group" style="margin-top: 20px; text-align: center;">
+        <input type="text" id="search" class="form-control"
+            placeholder="Digite pelo menos 3 caracteres para pesquisar os Serviços...">
+    </div>
+
+    {% for categoria in categorias %}
+    <h4 class="categoria">{{ categoria.nome }}</h4>
+    <div class="row">
+        <!-- Iterar pelos Serviços da Categoria -->
+        {% for servico in categoria.servicos %}
+        <div class="col-md-6">
+            <div class="card" data-toggle="modal"
+                data-target="#{{servico.nome|replace(' ', '')|replace(',', '')|replace('.','') }}" 
+                data-servico=" {{servico.nome}} {{ servico.descricao|safe }} {{servico.custo}}
+                style=" cursor: pointer;">
+                <div class="card-header">
+                    <strong>{{ servico.nome }}</strong>
+                </div>
+                <div class="card-body">
+                    <p class="espaco">{{ servico.descricao|safe }}</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal: {{ servico.nome }} -->
+        <div id="{{ servico.nome|replace(' ', '')|replace(',', '')  }}" class="modal fade" tabindex="-1"
+            role="dialog">
+            <div class="modal-dialog">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="panel-title">{{ servico.nome }}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p> {{ servico.descricao|safe }}</p>
+                        {% if servico.formas %}
+                        <h5><strong>Formas de Atendimento:</strong></h5>
+                        <p>{{ servico.formas|safe }}</p>
+                        {% endif %}
+                        {% if servico.requisitos %}
+                        <h5><strong>Requisitos e Documentos Necessários:</strong></h5>
+                        <p>{{ servico.requisitos|safe }}</p>
+                        {% else %}
+                        {% endif %}
+                        {% if servico.etapas %}
+                        <h5><strong>Como acessar ao serviço(Etapas):</strong></h5>
+                        <p>{{ servico.etapas|safe }}</p>
+                        {% endif %}
+                        
+                        {% if servico.prazo %}
+                        <h5><strong>Prazo:</strong></h5>
+                        <p>{{ servico.prazo|safe }}</p>
+                        {% endif %}
+                        {% if servico.contato %}
+                        <h5><strong>Contato:</strong></h5>
+                        <p>{{ servico.contato|safe }}</p>
+                        {% endif %}
+                        {#% if servico.comunicacao %}
+                        <h5><strong>Comunicação com o Usuário:</strong></h5>
+                        <p>{{ servico.comunicacao|safe }}</p>
+                        {% endif %#}
+                        {% if servico.prioridade %}
+                        <h5><strong>Prioridade:</strong></h5>
+                        <p>{{ servico.prioridade|safe }}</p>
+                        {% endif %}
+                        {% if servico.custo %}
+                        <h5><strong>Custo:</strong></h5>
+                        <p>{{ servico.custo|safe }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Filtro de busca no campo "dados-serviço"
+            const busca_qtd_chars = 3;
+            $('#search').on('input', function () {
+                const query = $(this).val().toLowerCase();
+                if (query.length >= busca_qtd_chars) {
+                    $('.card').each(function () {
+                        const dadosServico = $(this).data('servico').toLowerCase();
+                        $(this).closest('.col-md-6').toggle(dadosServico.includes(query));
+                    });
+                } else {
+                    $('.col-md-6').show();
+                }
+            });
+        });
+    </script>

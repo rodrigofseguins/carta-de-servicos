@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intel-Nutec</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Intel-Nutec</h1>
+
+        <!-- Campo de Busca -->
+        <div class="form-group" style="margin-top: 20px;">
+            <input type="text" id="search" class="form-control" placeholder="Procure em todos os campos...">
+        </div>
+
+        <!-- Painéis para Exibição de Dados -->
+        {% for categoria in categorias %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ categoria.nome }}</h3>
+            </div>
+            <div class="panel-body">
+                {% if categoria.servidores %}
+                    {% for servidor in categoria.servidores %}
+                    <div class="card" data-servico="{{ servidor.hostname }} {{ servidor.descricao }} {{ servidor.ip }}">
+                        <h4><strong>Hostname:</strong> {{ servidor.hostname }}</h4>
+                        <p><strong>Descrição:</strong> {{ servidor.descricao }}</p>
+                        <p><strong>IP:</strong> {{ servidor.ip }}</p>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+
+                {% if categoria.firewall %}
+                    {% for firewall in categoria.firewall %}
+                    <div class="card" data-servico="{{ firewall.hostname }} {{ firewall.descricao }} {{ firewall.ip }}">
+                        <h4><strong>Hostname:</strong> {{ firewall.hostname }}</h4>
+                        <p><strong>Descrição:</strong> {{ firewall.descricao }}</p>
+                        <p><strong>IP:</strong> {{ firewall.ip }}</p>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function resetSearch() {
+            const searchInput = document.getElementById('search');
+            searchInput.value = ''; // Limpa o campo de busca
+            $('.card').closest('.panel').show(); // Mostra todos os painéis
+        }
+
+        $(document).ready(function () {
+            // Filtro de busca no campo "dados-serviço"
+            const busca_qtd_chars = 3;
+            $('#search').on('input', function () {
+                const query = $(this).val().toLowerCase();
+                if (query.length >= busca_qtd_chars) {
+                    $('.card').each(function () {
+                        const dadosServico = $(this).data('servico').toLowerCase();
+                        $(this).toggle(dadosServico.includes(query));
+                        $(this).closest('.panel').toggle($(this).is(':visible'));
+                    });
+                } else {
+                    $('.card').show();
+                    $('.panel').show();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

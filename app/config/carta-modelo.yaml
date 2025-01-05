@@ -1,0 +1,126 @@
+categorias:
+  - nome: Apresentação da Carta de Serviços
+    servicos:
+      - nome: Sobre a Carta de Serviços
+        descricao: Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+  - nome: Informações Gerais
+    servicos:
+      - nome: Missão, Visão e Valores
+        descricao: '<a href="#">Conheça os pilares que guiam a Justiça Federal.</a>'
+        requisitos: Nenhum.
+        etapas: Acessar o site oficial e consultar a página "Sobre".
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Portal da Transparência
+        descricao: Consulte as informações sobre a transparência pública.
+        requisitos: Nenhum.
+        etapas: Navegar no portal de transparência.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Contatos Úteis
+        descricao: Encontre os contatos e canais de atendimento da Justiça Federal.
+        requisitos: Nenhum.
+        etapas: Acessar a página de contatos.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Histórico da Justiça Federal
+        descricao: Descubra a história e marcos da Justiça Federal.
+        requisitos: Nenhum.
+        etapas: Navegar pela página de histórico.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Relatórios de Gestão
+        descricao: Consulte os relatórios anuais de gestão da Justiça Federal.
+        requisitos: Nenhum.
+        etapas: Acessar os relatórios no portal oficial.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+
+  - nome: Consulta Processual
+    servicos:
+      - nome: Consulta Processual
+        descricao: Acompanhe o andamento do seu processo judicial.
+        requisitos: Número do processo.
+        etapas: Informar o número do processo no portal.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: PJe
+        descricao: Plataforma de Processo Judicial Eletrônico.
+        requisitos: Cadastro no sistema.
+        etapas: Registrar-se e acessar a plataforma.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Certidão Eletrônica
+        descricao: Solicite certidões judiciais de forma eletrônica.
+        requisitos: Cadastro no portal.
+        etapas: Preencher o formulário online.
+        prazo: Até 2 dias úteis.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Consultar Pautas de Julgamento
+        descricao: Acompanhe as pautas de julgamento disponíveis no portal.
+        requisitos: Nenhum.
+        etapas: Acessar a página de pautas no portal.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Acompanhamento de Recursos
+        descricao: Consulte o andamento dos recursos interpostos.
+        requisitos: Número do recurso.
+        etapas: Acessar o portal e informar o número do recurso.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+
+  - nome: Atendimento ao Cidadão
+    servicos:
+      - nome: Atendimento Virtual
+        descricao: Respostas automáticas para dúvidas frequentes.
+        requisitos: Nenhum.
+        etapas: Interagir com o assistente virtual no portal.
+        prazo: Imediato.
+        custos: Gratuito.
+        locais: Disponível online 24h por dia.
+      - nome: Balcão Virtual
+        descricao: Atendimento remoto para consultas processuais.
+        requisitos: Conexão à internet.
+        etapas: Agendar o atendimento e acessar pelo link recebido.
+        prazo: Até 24 horas para agendamento.
+        custos: Gratuito.
+        locais: Online, de segunda a sexta-feira, das 8h às 18h.
+      - nome: Plantão Judicial
+        descricao: Atendimento emergencial fora do horário de expediente.
+        requisitos: Necessidade comprovada.
+        etapas: Entrar em contato pelos canais do plantão.
+        prazo: Conforme a urgência.
+        custos: Gratuito.
+        locais: Telefônico ou presencial, conforme informado no portal.
+      - nome: Ouvidoria
+        descricao: Envie reclamações, sugestões ou elogios.
+        requisitos: Nenhum.
+        etapas: Preencher o formulário da ouvidoria no portal.
+        prazo: Resposta em até 5 dias úteis.
+        custos: Gratuito.
+        locais: Online ou presencialmente na unidade mais próxima.
+      - nome: Agendamento de Atendimento Presencial
+        descricao: Agende atendimento presencial em uma unidade.
+        requisitos: Documento de identificação.
+        etapas: Realizar o agendamento pelo portal e comparecer na data marcada.
+        prazo: Imediato para agendamento.
+        custos: Gratuito.
+        locais: Nas unidades indicadas no portal.
+
+  - nome: Nova Categoria
+    servicos:
+      - nome: Nome do Serviço
+        descricao: Descrição do serviço.
+      - nome: serviço.
+        descricao: Novo serviço
+

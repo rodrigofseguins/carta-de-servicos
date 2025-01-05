@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        {% import 'carta-estilos.html' as estilos %}
+        {{ estilos.render_styles() }}
+
+        <div class="row">
+            <!-- 
+        <h3 class="area-title"><i class="fa fa-info-circle"></i> <strong>SJMA: </strong> Carta de Serviços ao Usuário
+        </h3><br> -->
+            <div class="page-header">
+                <h2>Carta de Serviços ao Usuário </h2>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+            Fundamentação Legal da Carta de Serviços:
+            Conforme Lei n. 13.460, de 26 de junho de 2017, Decreto n.9094,
+            de 17 de julho de 2017 e Resolução CJF n. 630, de 5 de maio de 2020
+        </p>
+
+        </div>
+
+        {% include 'cartadicas.html' %}
+
+
+        <!--div class="row">
+        <div class="form-group" style="margin-top: 20px; text-align: center;">
+            <div class="col-md-8">
+                <input type="text" id="search" class="form-control"
+                    placeholder="Digite pelo menos 3 caracteres para iniciar a pesquisa dos Serviços...">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block" type="button" onclick="resetSearch();">Limpar</button>
+            </div>
+        </div>
+    </div-->
+        {% include 'cartapesquisar.html'%}
+        <br>
+        <div class="row">
+            {% include "cartaservicos.html" %}
+            {% block cartaservicos %}
+            <!-- Bloco para os cartões de serviços -->
+            {% endblock %}
+        </div>
+
+
+        <!-- Modais -->
+        <!-- Bloco para os modais -->
+        {% include "cartamodais.html" %}
+    </main>
+</body>
+
+</html>

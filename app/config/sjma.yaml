@@ -1,0 +1,22 @@
+categorias:
+  # Categoria Serviços Processuais e Processo Judicial Eletrônico - PJe
+  - nome: <i class="fa fa-balance-scale" aria-hidden="true"></i> Serviços Processuais e Processo Judicial Eletrônico - PJe
+    servicos:
+      # Serviço Consulta processual
+      - nome: Consulta processual 
+        descricao: Saiba como consultar informações sobre processos.
+        usuarios: Público em geral
+        custo: Gratuito
+        requisitos: Possuir dados suficientes para consulta, como nº do processo, nome da parte, nome do advogado, CPF ou CNPJ.
+        etapas: |
+          De forma online:<br>
+          1. Acesse à <a href="https://www.trf1.jus.br/sjma/processual/consulta-processual" target="_blank">página de consulta</a><br>
+          2. Selecione o tipo de consulta<br>
+          3. Insira os dados para realizar a consulta.
+          De forma presencial: Dirija-se a uma secretaria de vara.
+        formas: Online
+        prazo: Imediato/72 horas
+        contato: Pode ser pelo email-ma@trf1.jus.br
+        comunicacao: O usuário poderá receber informações por e-mail, whatsapp ou telefone
+        prioridade: Legais
+     

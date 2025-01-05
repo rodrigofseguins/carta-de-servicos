@@ -1,0 +1,20 @@
+
+{% for categoria in categorias %}
+        <h2 class="categoria">{{ categoria.nome|safe }}</h2>
+        <div class="row">
+            <!-- Iterar pelos Serviços da Categoria -->
+            {% for servico in categoria.servicos %}
+            <div class="col-md-6">
+                <div class="card" data-toggle="modal"
+                    data-target="#{{servico.nome|replace(' ', '')|replace(',', '')|replace('.','') }}" 
+                    data-servico="{{ categoria.nome }} {{servico.nome}} {{ servico.descricao }} {{servico.custo}} {{ servico.formas}}"
+                    style="cursor: pointer;">
+                    <div class="card-header">{{ servico.nome }}</div>
+                    <div class="card-body">
+                        <p class="espaco">{{ servico.descricao|safe }}</p>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+{%endfor%}            
